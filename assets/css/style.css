@@ -9,112 +9,86 @@ body {
   background: transparent;
 }
 
-/* green button */
-.green-button {
-  padding: 1em 2em;
-  margin-top: 150px;
-  /* margin-right: 50px; */
-  background-color: rgb(3, 219, 32);
-  color: #fff;
+.btn-6 {
+  position: relative;
+  right: 20px;
+  bottom: -20px;
+  border: none;
+  box-shadow: none;
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
   border-radius: 5px;
-  border:none;
-  cursor: pointer;
-  position:relative;
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
-  box-shadow: 0 2px 25px rgb(3, 219, 32, 0.8);  
+  background-color: rgb(17, 196, 41);
 }
 
-.green-button:before, 
-.green-button:after {
+.btn-6 span {
+  background: rgb(17, 196, 41);
+  background: linear-gradient(0deg, rgb(17, 196, 41) 0%, rgb(17, 196, 41) 100%);
+  color: #fff;
+  display: block;
   position: absolute;
-  content: "";
-  display: block;
-  width: 140%;
-  height: 100%;
-  left:-20%;
-  z-index: -1000;
-  transition: all ease-in-out 0.5s;
-  background-repeat: no-repeat;
-} 
-
-.green-button:before,
-.green-button:after
- {
-  display: none;
-  background-image: 
-    radial-gradient(circle, rgb(3, 219, 32) 20%, transparent 20%),
-    radial-gradient(circle, transparent 20%, rgb(3, 219, 32) 20%, transparent 30%),
-    radial-gradient(circle, rgb(3, 219, 32) 20%, transparent 20%),
-    radial-gradient(circle, rgb(3, 219, 32) 20%, transparent 20%),
-    radial-gradient(circle, transparent 10%, rgb(3, 219, 32) 15%, transparent 20%),
-    radial-gradient(circle, rgb(3, 219, 32) 20%, transparent 20%),
-    radial-gradient(circle, rgb(3, 219, 32) 20%, transparent 20%),
-    radial-gradient(circle, rgb(3, 219, 32) 20%, transparent 20%),
-    radial-gradient(circle, rgb(3, 219, 32) 20%, transparent 20%);
-  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
-    10% 10%, 18% 18%;
+  top: -1px;
+  left: -1px;
+  width: 131px;
+  height: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
-.green-button:before {
-  top: -75%;
+.btn-6 span:nth-child(1) {
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
+  border-radius: 5px;
 }
-.green-button:after {
-  bottom: -75%;
+.btn-6 span:nth-child(2) {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+  -moz-transform-origin: 50% 50% -20px;
+  transform-origin: 50% 50% -20px;
 }
-
-.green-button:active {
-  transform: scale(0.9);
-  background-color: rgb(3, 219, 32, 0.8);
-  box-shadow: 0 2px 25px rgba(3, 219, 32, 0.2);
+.btn-6:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+  border-radius: 5px;
 }
-
-.green-button.animate:before {
-  display: block;
-  animation: greentopBubbles ease-in-out 0.75s forwards;
+.btn-6:hover span:nth-child(2) {
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  color: transparent;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  border-radius: 5px;
 }
-
-.green-button.animate:after {
-  display: block;
-  animation: greenbottomBubbles ease-in-out 0.75s forwards;
-}
-
-@keyframes greentopBubbles {
-  0% {
-    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
-      40% 90%, 55% 90%, 70% 90%;
-  }
-  50% {
-    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
-      50% 50%, 65% 20%, 90% 30%;
-  }
-  100% {
-    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
-      50% 40%, 65% 10%, 90% 20%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-
-@keyframes greenbottomBubbles {
-  0% {
-    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
-      70% -10%, 70% 0%;
-  }
-  50% {
-    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
-      105% 0%;
-  }
-  100% {
-    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
-      110% 10%;
-    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
-  }
-}
-
 
 body::before {
   content: "";
   position: fixed;
-  background: linear-gradient( rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.315)),url("../img/my-port-bg.png");
+  background: linear-gradient(rgba(0, 0, 0, 0.315), rgba(0, 0, 0, 0.315)),
+    url("../img/my-port-bg.png");
   /* background: #040404 url("../img/my-port-bg.png") top right no-repeat; */
   background-size: cover;
   left: 0;
@@ -311,7 +285,7 @@ h6 {
   position: relative;
 }
 
-.navbar li+li {
+.navbar li + li {
   margin-left: 30px;
 }
 
@@ -350,7 +324,7 @@ h6 {
 }
 
 .navbar a:hover:before,
-.navbar li:hover>a:before,
+.navbar li:hover > a:before,
 .navbar .active:before {
   visibility: visible;
   width: 25px;
@@ -359,7 +333,7 @@ h6 {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #fff;
 }
 
@@ -424,7 +398,7 @@ h6 {
   padding: 12px 20px;
 }
 
-.navbar-mobile li+li {
+.navbar-mobile li + li {
   margin: 0;
 }
 
@@ -1065,7 +1039,7 @@ section .container {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1108,7 +1082,7 @@ section .container {
 
 .contact .info-box i.bx {
   font-size: 24px;
-  color: #18d26e;
+  color: #18d26f;
   border-radius: 50%;
   padding: 14px;
   float: left;
@@ -1162,7 +1136,7 @@ section .container {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1230,7 +1204,7 @@ section .container {
   padding: 12px 15px;
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   background: #18d26e;
   border: 0;
   padding: 10px 30px;
@@ -1239,7 +1213,7 @@ section .container {
   border-radius: 4px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: #15bb62;
 }
 
