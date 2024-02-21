@@ -762,7 +762,7 @@ Partnering with agencies and brands that value design and development integrity.
           <div class="info-box">
             <i class="bx bx-envelope"></i>
             <h3>Email Me</h3>
-            <p>najeebat2489@gmail.com</p>
+            <p>isholanajeebatadedoyin@gmail.com</p>
           </div>
         </div>
         <div class="col-md-6 mt-4 d-flex align-items-stretch">
@@ -774,7 +774,11 @@ Partnering with agencies and brands that value design and development integrity.
         </div>
       </div>
 
-      <form action="./forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+      <!-- <form action="./forms/contact.php" method="post" role="form" class="php-email-form mt-4"> -->
+        <form action="https://api.web3forms.com/submit" id="form"  method="POST" class="php-email-form mt-4">
+
+          <input type="hidden"  name="access_key" value="f9e39dcc-8b2a-4176-ba58-88ac02495f58">
+
         <div class="row">
           <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -789,11 +793,13 @@ Partnering with agencies and brands that value design and development integrity.
         <div class="form-group mt-3">
           <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
         </div>
-        <div class="my-3">
+        <!-- <div class="my-3">
           <div class="loading">Loading</div>
           <div class="error-message"></div>
           <div class="sent-message">Your message has been sent. Thank you!</div>
-        </div>
+        </div> -->
+        <p class="text-base text-center text-gray-500" id="result"></p>
+
         <div class="text-center contact-btn"><button class="btn-4" type="submit">Send Message</button></div>
       </form>
 
@@ -808,11 +814,12 @@ Partnering with agencies and brands that value design and development integrity.
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/script.js"></script>
+  <script src="./assets/js/contact.js"></script>
+
 
   
 </body>
